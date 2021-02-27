@@ -1,17 +1,27 @@
 <div>
     <div class="form-group">
-        <div class="col-md-12">
-            <label>Start Writing your Blog here.............</label>
+        <div style="display: inline;" align="center">
+            <div style="float: left;">
+                <button type="button" style="float: right;" class="btn btn-primary" (click)="goBack()">Go To Blogs
+                    List</button>
+            </div>
+            <div style="float: right;">
+                <button type="button" style="float: right;" class="btn btn-danger" (click)="logout()">Logout</button>
+            </div>
         </div>
         <div class="col-md-12">
-            <textarea class="form-control form-control-sm" [(ngModel)] = blogText rows="3"></textarea>     
-        </div>       
-      </div>
+            <p class="h1 text-primary">Start Writing your Blog here.............</p>
+        </div>
+
+        <div class="col-md-12">
+            <textarea class="form-control form-control-sm" [(ngModel)]=blogtext rows="10"></textarea>
+        </div>
+    </div>
     <!-- <textarea class="desc_box" >
     </textarea> -->
     <div class="col-md-12" style="margin-top: 10px;">
-        <button class="btn btn-lg btn-primary btn-block" (click)="add()">
-            Add new  Blog
-          </button>
+        <button type="button" class="btn btn-primary" (click)="add()">
+            Add Blog
+        </button>
     </div>
-  </div>
+</div>

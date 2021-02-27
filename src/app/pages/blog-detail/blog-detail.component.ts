@@ -6,13 +6,13 @@ import { Blog } from '../../model/blog';
 import { BlogService } from '../../services/blog.service';
 
 @Component({
-  selector: 'app-hero-detail',
+  selector: 'app-blog-detail',
   templateUrl: './blog-detail.component.html',
   styleUrls: [ './blog-detail.component.css' ]
 })
 export class BlogDetailComponent implements OnInit {
   blogs: any;
-
+  index:any;
   constructor(private router: Router,
     private route: ActivatedRoute,
     private blogService: BlogService,
@@ -34,7 +34,10 @@ export class BlogDetailComponent implements OnInit {
   }
 
   save(): void {
-    debugger;
+    if(this.blogs[0].blogtext == '' || this.blogs[0].blogtext == null){
+      window.alert("Blog area can't be empty......");
+      return;
+    }
     this.blogService.updateBlog(this.blogs[0]);
     this.router.navigate(['/blogs']);
   }

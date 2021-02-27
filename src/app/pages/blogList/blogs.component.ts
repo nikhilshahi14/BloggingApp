@@ -5,7 +5,7 @@ import { Blog } from '../../model/blog';
 import { BlogService } from '../../services/blog.service';
 
 @Component({
-  selector: 'app-heroes',
+  selector: 'blog',
   templateUrl: './blogs.component.html',
   styleUrls: ['./blogs.component.css']
 })
@@ -16,17 +16,18 @@ export class BlogsComponent implements OnInit {
   constructor(private router: Router,private blogService: BlogService) { }
 
   ngOnInit() {
-    this.getHeroes();
+    this.getBlogs();
   }
 
-  getHeroes(): void {
+  getBlogs(): void {
    this.blogs =   this.blogService.getBloggerList()
   }
   add(){
     this.router.navigate(['/add-blog']);
   }
-  delete(blog: Blog): void {
-     this.blogs = this.blogs.filter(h => h !== blog);
+  delete(i): void {
+     this.blogService.deleteBlog(i);
+     window.location.reload();
   }
   
   logout(){

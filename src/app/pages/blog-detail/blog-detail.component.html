@@ -1,11 +1,11 @@
 
 <div *ngIf="blogs">
   <div class="form-group">
+    <div class="col-md-12">
+      <p class="h1 text-primary">Update Blog</p>
+    </div>
       <div class="col-md-12">
-          <label>Edit your Block</label>
-      </div>
-      <div class="col-md-12">
-          <textarea class="form-control form-control-sm" [(ngModel)] = blogs[0].blogtext rows="3"></textarea>     
+          <textarea class="form-control form-control-sm" [(ngModel)] = blogs[0].blogtext rows="10"></textarea>     
       </div>       
     </div>
   <!-- <textarea class="desc_box" >
@@ -13,12 +13,12 @@
   <div class="col-md-12" style="margin-top: 10px;">
     <div class="row">
      <div class="col-md-1">
-      <button class="btn btn-lg btn-primary btn-block" (click)="goBack()">
+      <button type="button" class="btn btn-danger" (click)="goBack()">
         Go Back
        </button>
      </div>
      <div class="col-md-1">
-      <button class="btn btn-lg btn-primary btn-block" (click)="save()">
+      <button type="button" class="btn btn-primary" (click)="save()">
         Save
       </button>
      </div>
@@ -27,14 +27,3 @@
       
   </div>
 </div>
-<!-- <div *ngIf="blogs">
-  <div><span>id: </span>{{blogs[0].id}}</div>
-  <div>
-    <label for="hero-name">Blogg Description: </label>
-    <textarea [(ngModel)]="blogs[0].blogtext">
-
-    </textarea>
-  </div>
-  <button (click)="goBack()">go back</button>
-  <button (click)="save()">save</button>
-</div> -->

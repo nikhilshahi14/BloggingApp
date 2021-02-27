@@ -23,17 +23,29 @@ export class BlogService {
   }
 
   public setBloggerList(blooggerList) {
-    debugger;
     if(localStorage.getItem('blooggerList')) {
       this.blooggerList= JSON.parse(localStorage.getItem('blooggerList'));
-      this.blooggerList.push(blooggerList);
-      localStorage.setItem('blooggerList' ,JSON.stringify(blooggerList))
+      this.blooggerList.push(blooggerList[0]);
+      localStorage.setItem('blooggerList' ,JSON.stringify(this.blooggerList))
+    }
+    else{
+      localStorage.setItem('blooggerList' ,JSON.stringify(blooggerList));
     }
   }
   public updateBlog(editBlog){
     this.blooggerList = JSON.parse(localStorage.getItem('blooggerList'))
-    this.blooggerList[0][editBlog.id].blogtext = editBlog.blogtext;
+    this.blooggerList.filter(e=> e.id ==editBlog.id)[0].blogtext = editBlog.blogtext;
     localStorage.setItem('blooggerList' ,JSON.stringify(this.blooggerList))
+  }
+  public deleteBlog(index){
+    this.blooggerList = JSON.parse(localStorage.getItem('blooggerList'))
+    if(this.blooggerList.length > 0){
+      this.blooggerList.splice(index,1);
+      localStorage.removeItem('blooggerList');
+      if(this.blooggerList.length > 0){
+        localStorage.setItem('blooggerList' ,JSON.stringify(this.blooggerList));
+      }
+    }
   }
 }
 
