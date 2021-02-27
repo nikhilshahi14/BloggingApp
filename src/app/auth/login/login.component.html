@@ -1,0 +1,25 @@
+<div class="content"> 
+    <div class="wrapper">
+        <div>
+            <h3 class="head-text">Blogging Application</h3>
+        </div>
+        <!-- BEGIN LOGIN FORM -->
+        <form class="form-signin" >
+            <h2 class="form-signin-heading" style="display: flex;justify-content: center;">Please Login</h2>           
+            <div class="form-group"  style="text-align: center;padding-bottom: 15px;">
+                <label class="control-label">User Name</label>
+                <input  class="form-control" style="border: 1px solid #003db3;border-radius: 5px;margin-left: 10px;" type="text"placeholder="Username" name="username" [(ngModel)]="model.username" />
+            </div>
+            <div class="form-group" style="text-align: center;">
+                <label class="control-label">Password</label>
+                <input  class="form-control" style="border: 1px solid #003db3;border-radius: 5px;margin-left: 15px;" type="password" autocomplete="off" placeholder="Password" name="password" [(ngModel)]="model.password" />
+            </div>
+            <div class="form-actions" style="text-align: center;">
+                <button type="submit" class="btn btn-lg btn-primary btn-block"
+                    style="background-color: darkturquoise" (click)="login()">Login</button>
+           </div>
+        </form>
+        <!-- END LOGIN FORM -->
+    </div>
+
+</div>

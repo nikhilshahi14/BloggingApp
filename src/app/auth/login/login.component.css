@@ -1,0 +1,89 @@
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    height: 100%;
+}
+
+.wrapper {
+    margin-top: 68px;
+    /* margin-bottom: 80px; */
+}
+.form-control {
+    position: relative;
+    font-size: 16px;
+    height: auto;
+    padding: 10px;
+    box-shadow: none;
+}
+.form-signin {
+    max-width: 380px;
+    padding: 15px 35px 45px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,0.1);
+    box-shadow: 4px 18px 24px #ccc;
+}
+
+.form-signin-heading, .checkbox {
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+.checkbox {
+    font-weight: normal;
+}
+
+.form-control {
+    position: relative;
+    font-size: 16px;
+    height: auto;
+    padding: 10px;
+}
+
+input[type="text"] {
+    margin-bottom: -1px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+input[type="password"] {
+    margin-bottom: 20px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+
+.head-text {
+
+margin-bottom:20px;
+font-family: inherit;
+font-weight: 500;
+line-height: 1.1;
+color: inherit;
+text-align: center;
+display: flex;
+justify-content: center;
+
+
+}
+
+.copyright {
+position:relative;
+/* margin-left:480px; */
+margin-top:10px;
+text-align: center;
+
+}
+
+.forget-password{
+padding-top:2px;
+}
+
+.btn-lg, .btn-group-lg>.btn {
+    padding: 5px 24px !important;
+    font-size: 18px !important;
+    line-height: 2.33 !important;
+    border-radius: 12px !important;
+}

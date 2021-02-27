@@ -1,0 +1,41 @@
+<div>
+  <h2>My Blogg</h2> 
+</div>
+<div style="float:right;margin-bottom: 10px;">
+  <button type="btn btn-primary" class="add-button" (click)="add()">
+    Add new  Blog
+  </button>
+</div>
+<table class="table">
+  <thead>
+    <tr style="background-color:lightcyan;text-align: center">
+      <th style="text-align: center">S.No</th>
+      <th style="text-align: center">Created Date</th>
+      <th style="text-align: center">Blog</th>
+      <th style="text-align: center">Action</th>
+    </tr>
+  </thead>
+  <tr style="text-align:center" *ngFor="let blog of blogs">
+   <td>{{blog.id}}</td>
+   <td>{{blog.date  | date: 'dd/MM/yyyy'}}</td>
+   <td>{{blog.blogtext}}</td>
+   <td><i class="fa fa-edit" style="font-size:20px;vertical-align:middle;color:#337ab7" (click)="edit(blog.id)"></i> 
+    <i class="fa fa-trash" style="display: inline-block;padding-left: 7px;cursor: pointer;color:#337ab7" (click)="delete(blog)"></i>
+  </td>
+  </tr>
+</table>
+<div style="text-align: center;font-size: larger;font-weight: 800;padding-top:80px;"
+    *ngIf='blogs?.length===0'>No Blogs, Please add your Blog first.</div>
+
+
+
+<!-- 
+<ul class="blogs">
+  <li *ngFor="let blog of blogs">
+    <a routerLink="/detail/{{blog.id}}">
+      <span class="badge">{{blog.id}}</span> {{blog.name}}
+    </a>
+    <button class="delete" title="delete hero"
+      (click)="delete(blog)">x</button>
+  </li>
+</ul> -->
